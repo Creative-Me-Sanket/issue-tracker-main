@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic';
+
+
 import authOptions from "@/app/auth/authOptions";
 import { patchIssueSchema } from "@/app/validationSchemas";
 import prisma from "@/prisma/client";

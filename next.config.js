@@ -3,7 +3,7 @@ const nextConfig = {
    async headers() {
       return [
          {
-            source: '/:path*',
+            source: '/api/:path*',
             headers: [
                { key: 'referrer-policy', value: 'no-referrer'}
             ]
