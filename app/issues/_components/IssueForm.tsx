@@ -30,6 +30,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
   const [isSubmitting, setSubmitting] = useState(false);
 
   const onSubmit = handleSubmit(async (data) => {
+    console.log("Button Called",data)
     try {
       setSubmitting(true);
       if (issue) await axios.patch('/api/issues/' + issue.id, data);
@@ -41,6 +42,8 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
       setError('An unexpected error occurred.');
     }
   });
+
+  
 
   return (
     <div className="max-w-xl">
